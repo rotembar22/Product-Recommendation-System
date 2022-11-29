@@ -28,9 +28,9 @@ Product recommender systems surface items available for purchase across web page
 Today, retailers often have thousands (and sometimes millions) of products in their inventories, making it difficult for consumers to dig up exactly what they are looking for.
 Powered by machine learning, a product recommender system is a technology used to suggest which products are shown to individuals interacting with a brand’s digital properties. 
 
-
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/New%20Bitmap%20image.JPg?raw=true)
-
+<p align="center">
+<img src="images/New Bitmap image.JPg" width=100% height=100% >
+</p>
 
 # Dataset Description
 ![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20104349.jpeg?raw=true)
