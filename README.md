@@ -85,6 +85,9 @@ The model pipeline is described as follows:
 5. Train Logistic Regression classifier.
 6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
+# Code implementation
+
+[__Notebook 1__](Product Recommendation System.ipynb) : ETL
 # Conclusions
 
 **Model results:**
