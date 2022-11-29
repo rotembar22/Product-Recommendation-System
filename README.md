@@ -89,7 +89,7 @@ The model pipeline is described as follows:
 # Theoretical Background
 
 <p align="center">
-<img src="images/Screenshot 2022-11-29 102547.jpeg" width=100% height=100% >
+<img src="images/Screenshot 2022-11-29 102547.jpeg" width=50% height=50% >
 </p>
 
 
