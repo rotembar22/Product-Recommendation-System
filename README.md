@@ -24,8 +24,9 @@ Designing a AI-based product recommendation system that offers the customer 3 to
 <img src="statis/dis3.jpg">
 </p>
  
-
-
+# Objective
+The client’s objective is to recommend products that customers are likely to purchase.
+The company objective is to solve the client's business problem by creating a real-time recommendation engine. The engine should be comprised of (1) a predictive model and (2) post-processing code which applies business rules to the raw model outputs.
 
 # Overview
 
@@ -37,40 +38,11 @@ Powered by machine learning, a product recommender system is a technology used t
 ![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/New%20Bitmap%20image.JPg?raw=true)
 
 
-# Metrics_in_the_Disaster_response_domain 
+# Dataset Description
+![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20103824.jpeg?raw=true)
 
-<table >
+# Model Metric
 
-  <tr>
-    <th style="background-color:gray">Metric</th>
-     <th style="background-color:gray" >What does that even means</th>
-    <th style="background-color:#00FF00">Why it's OK</th>
-    <th style="background-color:red">Why it's NOT OK</th>
-    <th style="background-color:orange">What should we do?</th>
-  </tr>
-  <tr>
-    <td colspan="1" rowspan="2">Precision</td>
-    <td>Precision is the measure of how many of our predicted positive (ypred=1) actually were positive (y=1)</td>
-    <td rowspan="2">In case of irrelevance  - the call would just be ignored </td>
-    <td>In case of Disaster  - many calls will be sent, and that may cause an unnecessary load</td>
-    <td rowspan="2">For classes that are'nt life or resource allocation crucial - medium to high threshold should be chosen</td>
-  </tr>
-  <tr>
-    <td>Practically, low rate means we will send many wrong calls to agencies</td>
-    <td>There could be a situation where an agency sends resources by mistake - that might cause an insufficient resource allocation for the real needed calls</td>
-  </tr>
-  <tr>
-    <td colspan="1" rowspan="2">Recall</td>
-    <td >how many actual positives (y=1) we predicted as positive (y=0)</td>
-    <td rowspan="2">Some topics are not crucial and can go undetected like reports that aren’t important for help</td>
-    <td >practically - that means agencies will not get the distress call - because it will be classified as False by mistake</td>
-    <td rowspan="2">For classes that Are life or resource allocation crucial - low to  threshold should be chosen</td>
-    </tr>
-    <tr>
-    <td >Low Recall means a High False Negative rate. In case of emergency, its crucial not to miss any stress calls that revolve saving life’s</td>
-    <td >In this domain - for life saving classes, there soul'd be an attempt to get the lowest FN rate as possible</td>
-    </tr>
-</table>
 
 # Components
 
