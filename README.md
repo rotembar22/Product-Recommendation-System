@@ -3,18 +3,11 @@
 # Contents
 
 [***Objective***](https://github.com/rotembaruch/Product-Recommendation-System#objective)
-
-[***Overview***](https://github.com/uriaLevko/Disaster_response#overview)
-
-[***Metrics Meaning***](https://github.com/uriaLevko/Disaster_response#Metrics_in_the_Disaster_response_domain)
-
-[***Components***](https://github.com/uriaLevko/Disaster_response#Components)
-
-[***Files***](https://github.com/uriaLevko/Disaster_response#Files)
-
-[***Results_discussion***](https://github.com/uriaLevko/Disaster_response#Results_discussion)
-
-[***Activation***](https://github.com/uriaLevko/Disaster_response#Activation)
+[***Overview***](https://github.com/rotembaruch/Product-Recommendation-System#overview)
+[***Dataset Description***](https://github.com/rotembaruch/Product-Recommendation-System#Dataset Description)
+[***Research***](https://github.com/rotembaruch/Product-Recommendation-System#research)
+[***Methodology***](https://github.com/rotembaruch/Product-Recommendation-System#methodology)
+[***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
 
  
@@ -89,8 +82,10 @@ The model pipeline is described as follows:
 
 **Model results:**
 * Hit-rate results: 66.3%
-* Hit-rate per item: 49.1%
-Word2vec learns the semantic relationship between the items.
+<br>
+For this experiment, we used the 3 recommended products while taking the first product of the test instant as the input and defining all the rest as the target.  
+We can see that we achieved Hit-Rate of 66%, which can be considered high in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
+It will be interesting to compare this algorithm to other algorithms that are used in the industry because, to my best knowledge, the use of word2vec as embedding in recommendation systems is implemented only in the academic field but not in the industry. 
 
 **Future work:**
 * Testing different methodologies, for example, reinforcement learning, unsupervised(Matrix Factorization), and Cosine similarity.
