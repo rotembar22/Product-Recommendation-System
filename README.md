@@ -49,7 +49,7 @@ known information would include: daypart, channel, and the first 1+ item(s) that
 customer chooses more items. However, a customer should see no more than 5 unique item recommendations during their order.
 • A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
 
-Therefore the metric **Hit-rate** described as follows:
+Therefore the metric **Hit-Rate** described as follows:
 A “hit” would occur if a customer purchases an item that was recommended/
 
 ![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20102451.jpeg?raw=true)
@@ -65,31 +65,28 @@ There are many approaches that can address our task. In this project, I decided 
 # Methodology
 
 The system I built consists of two main components. An embedding model aims to learn the relationships between the products and, thus, the ability to represent them in the vector space. And a classification model that can produce the vector of probabilities for purchasing each product.
+ 
 
 ![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/methodology.jpg?raw=true)
 
+The model pipeline is described as follows:
+1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
+2. One-Hot Encoding for the categorical features
+3. Train-Test split -an important note is that we will train only on the train set in the embedding model. It is easy to make a mistake by train embedding the model on all the data and encoding only the train, which causes data leakage.
+4. Train word2vec embedding model
+5. Encode each transaction by averaging the embedded vectors.
+6. Train Logistic Regression classifier.
+7. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
-2. ML Pipeline - train_classifier.py, a machine learning pipeline that:
-* Loads data from the SQLite database
-* Splits the dataset into training and test sets
-* Builds a text processing and machine learning pipeline
-* Trains and tunes a model using GridSearchCV
-* Outputs results on the test set
-* Exports the final model as a pickle file
-3. Flask Web App -
-* classes data visualizations using Plotly in the web app.
-* input massage to get class classification
 
 # Files
 
-[__Notebook 1__](/Files/ETL_Pipeline_Preparation.ipynb) : ETL
-
-[__Notebook 2__](/Files/ML_Pipeline_PreparationF.ipynb) : ML Pipeline
-
-[__Complete_Project__](/Files/disaster-response-pipeline-project): Full project
+[__Notebook __](/Product Recommendation System.ipynb)
 
 
-# Results_discussion
+
+
+# Theoretical Background
 
 <p align="center">
 <img src="statis/newplot (1).png" width=100% height=100% >
