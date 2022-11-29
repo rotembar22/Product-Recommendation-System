@@ -73,22 +73,25 @@ The model pipeline is described as follows:
 1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
 2. One-Hot Encoding for the categorical features
 3. Train-Test split -an important note is that we will train only on the train set in the embedding model. It is easy to make a mistake by train embedding the model on all the data and encoding only the train, which causes data leakage.
-4. Train word2vec embedding model
-5. Encode each transaction by averaging the embedded vectors.
-6. Train Logistic Regression classifier.
-7. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
+4. Train a word2vec embedding model
+5. Train Logistic Regression classifier.
+6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
+
+# Conclusions
+
+**Model results:**
+* Hit-rate results: 66.3%
+* Hit-rate per item: 49.1%
+Word2vec learns the semantic relationship between the items.
+
+**Future work:**
+* Testing different methodologies, for example, reinforcement learning, unsupervised(Matrix Factorization), and Cosine similarity.
+* Model optimization: embedding vector size, regularization (L1/L2), classifier (SVM).
+* Top 4&5 threshold tuning with a validation set.
 
 
-# Files
-
-[__Notebook 1__](Product Recommendation System.ipynb) : Jupyter notebook
 
 
 
-# Theoretical Background
-
-<p align="center">
-<img src="images/Screenshot 2022-11-29 102547.jpeg" width=50% height=50% >
-</p>
 
 
