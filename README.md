@@ -1,9 +1,5 @@
 # Product Recommendation System
 
-Designing a AI-based product recommendation system that offers the customer 3 to 5 products based on 1 product he intends to purchase.
-
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/methodology.jpg?raw=true)
-
 # Contents
 
 [***Objective***](https://github.com/rotembaruch/Product-Recommendation-System#objective)
@@ -20,9 +16,7 @@ Designing a AI-based product recommendation system that offers the customer 3 to
 
 [***Activation***](https://github.com/uriaLevko/Disaster_response#Activation)
 
-<p align="center">
-<img src="statis/dis3.jpg">
-</p>
+
  
 # Objective
 The client’s objective is to recommend products that customers are likely to purchase.
@@ -39,20 +33,41 @@ Powered by machine learning, a product recommender system is a technology used t
 
 
 # Dataset Description
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20103824.jpeg?raw=true)
+![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20104349.jpeg?raw=true)
 
-# Model Metric
+**tid** -Unique transaction ID
+**date** -Date of transaction
+**daypart** --Time of day when order occurred
+**channel** -Indicates how a customer placed their order
+**items** -Sequenced receipt data. Read from left-to-right, this indicates the sequence in which the customer chose each item while placing an order. e.g., "X,Y,Z" would mean that the customer ordered X, then Y, then Z within a single transaction.
+
+# Model Metric & Model Requierments
+
+• Recommendations will occur at the transaction level and will be derived from the raw outputs of your predictive model. When making an item recommendation,
+known information would include: daypart, channel, and the first 1+ item(s) that the customer has already chosen.
+• A recommendation will be determined and shown immediately after the customer chooses their first item. Optionally, the recommendation is allowed to update as a
+customer chooses more items. However, a customer should see no more than 5 unique item recommendations during their order.
+• A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
+
+Therefore the metric **Hit-rate** described as follows:
+A “hit” would occur if a customer purchases an item that was recommended/
+
+![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20102451.jpeg?raw=true)
 
 
-# Components
+# Research
 
-There are three main components to this project.
+There are many approaches that can address our task. In this project, I decided to use the word2vec embedding model. Here is a quick list of related works that used word2vec  for recommendation systems (I didn't read all of them).
 
-1. ETL Pipeline - process_data.py:
-* Loads the messages and categories datasets
-* Merges the two datasets
-* Cleans the data
-* Stores it in a SQLite database
+![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20102510.jpeg?raw=true)
+
+
+# Methodology
+
+The system I built consists of two main components. An embedding model aims to learn the relationships between the products and, thus, the ability to represent them in the vector space. And a classification model that can produce the vector of probabilities for purchasing each product.
+
+![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/methodology.jpg?raw=true)
+
 
 2. ML Pipeline - train_classifier.py, a machine learning pipeline that:
 * Loads data from the SQLite database
