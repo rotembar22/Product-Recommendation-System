@@ -3,10 +3,15 @@
 # Contents
 
 [***Objective***](https://github.com/rotembaruch/Product-Recommendation-System#objective)
+
 [***Overview***](https://github.com/rotembaruch/Product-Recommendation-System#overview)
-[***Dataset Description***](https://github.com/rotembaruch/Product-Recommendation-System#Dataset Description)
+
+[***Dataset Description***](https://github.com/rotembaruch/Product-Recommendation-System#dataset)
+
 [***Research***](https://github.com/rotembaruch/Product-Recommendation-System#research)
+
 [***Methodology***](https://github.com/rotembaruch/Product-Recommendation-System#methodology)
+
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
 
@@ -25,7 +30,7 @@ Powered by machine learning, a product recommender system is a technology used t
 <img src="images/New Bitmap image.JPg" width=50% height=50% >
 </p>
 
-# Dataset Description
+# Dataset
 <p align="center">
 <img src="images/Screenshot 2022-11-29 104349.jpeg" width=50% height=50% >
 </p>
