@@ -29,11 +29,13 @@ Today, retailers often have thousands (and sometimes millions) of products in th
 Powered by machine learning, a product recommender system is a technology used to suggest which products are shown to individuals interacting with a brand’s digital properties. 
 
 <p align="center">
-<img src="images/New Bitmap image.JPg" width=100% height=100% >
+<img src="images/New Bitmap image.JPg" width=50% height=50% >
 </p>
 
 # Dataset Description
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20104349.jpeg?raw=true)
+<p align="center">
+<img src="images/Screenshot 2022-11-29 104349.jpeg" width=50% height=50% >
+</p>
 
 **tid** -Unique transaction ID
 **date** -Date of transaction
@@ -52,22 +54,28 @@ customer chooses more items. However, a customer should see no more than 5 uniqu
 Therefore the metric **Hit-Rate** described as follows:
 A “hit” would occur if a customer purchases an item that was recommended/
 
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20102451.jpeg?raw=true)
-
+<p align="center">
+<img src="images/Screenshot 2022-11-29 102451.jpeg" width=50% height=50% >
+</p>
 
 # Research
 
 There are many approaches that can address our task. In this project, I decided to use the word2vec embedding model. Here is a quick list of related works that used word2vec  for recommendation systems (I didn't read all of them).
 
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/images/Screenshot%202022-11-29%20102510.jpeg?raw=true)
-
+<p align="center">
+<img src="images/Screenshot 2022-11-29 102510.jpeg" width=50% height=50% >
+</p>
 
 # Methodology
 
 The system I built consists of two main components. An embedding model aims to learn the relationships between the products and, thus, the ability to represent them in the vector space. And a classification model that can produce the vector of probabilities for purchasing each product.
  
 
-![Seer Logo](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/methodology.jpg?raw=true)
+
+<p align="center">
+<img src="methodology.jpg" width=50% height=50% >
+</p>
+
 
 The model pipeline is described as follows:
 1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
