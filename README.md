@@ -81,8 +81,7 @@ The model pipeline is described as follows:
 
 # Files
 
-[__Notebook __](/Product Recommendation System.ipynb)
-
+[__Notebook 1__](Product Recommendation System.ipynb) : Jupyter notebook
 
 
 
