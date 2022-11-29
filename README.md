@@ -41,17 +41,17 @@ Powered by machine learning, a product recommender system is a technology used t
 <br>**date** -Date of transaction
 <br>**daypart** --Time of day when order occurred
 <br>**channel** -Indicates how a customer placed their order
-**items** -Sequenced receipt data. Read from left-to-right, this indicates the sequence in which the customer chose each item while placing an order. e.g., "X,Y,Z" would mean that the customer ordered X, then Y, then Z within a single transaction.
+<br>**items** -Sequenced receipt data. Read from left-to-right, this indicates the sequence in which the customer chose each item while placing an order. e.g., "X,Y,Z" would mean that the customer ordered X, then Y, then Z within a single transaction.
 
 # Model Metric & Model Requierments
 
-• Recommendations will occur at the transaction level and will be derived from the raw outputs of your predictive model. When making an item recommendation,
+<br>• Recommendations will occur at the transaction level and will be derived from the raw outputs of your predictive model. When making an item recommendation,
 known information would include: daypart, channel, and the first 1+ item(s) that the customer has already chosen.
-• A recommendation will be determined and shown immediately after the customer chooses their first item. Optionally, the recommendation is allowed to update as a
+<br>• A recommendation will be determined and shown immediately after the customer chooses their first item. Optionally, the recommendation is allowed to update as a
 customer chooses more items. However, a customer should see no more than 5 unique item recommendations during their order.
-• A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
+<br>• A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
 
-Therefore the metric **Hit-Rate** described as follows:
+<br>Therefore the metric **Hit-Rate** described as follows:
 A “hit” would occur if a customer purchases an item that was recommended/
 
 <p align="center">
@@ -85,9 +85,6 @@ The model pipeline is described as follows:
 5. Train Logistic Regression classifier.
 6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
-# Code implementation
-
-[__Notebook 1__](Product Recommendation System.ipynb) : ETL
 # Conclusions
 
 **Model results:**
