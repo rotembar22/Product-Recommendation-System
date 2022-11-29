@@ -20,7 +20,7 @@
  
 # Objective
 The client’s objective is to recommend products that customers are likely to purchase.
-The company objective is to solve the client's business problem by creating a real-time recommendation engine. The engine should be comprised of (1) a predictive model and (2) post-processing code which applies business rules to the raw model outputs.
+The company objective is to solve the client's business problem by creating a real-time recommendation engine. 
 
 # Overview
 
@@ -37,10 +37,10 @@ Powered by machine learning, a product recommender system is a technology used t
 <img src="images/Screenshot 2022-11-29 104349.jpeg" width=50% height=50% >
 </p>
 
-**tid** -Unique transaction ID
-**date** -Date of transaction
-**daypart** --Time of day when order occurred
-**channel** -Indicates how a customer placed their order
+<br>**tid** -Unique transaction ID
+<br>**date** -Date of transaction
+<br>**daypart** --Time of day when order occurred
+<br>**channel** -Indicates how a customer placed their order
 **items** -Sequenced receipt data. Read from left-to-right, this indicates the sequence in which the customer chose each item while placing an order. e.g., "X,Y,Z" would mean that the customer ordered X, then Y, then Z within a single transaction.
 
 # Model Metric & Model Requierments
