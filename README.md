@@ -14,7 +14,6 @@
 
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
-
  
 # Objective
 The client’s objective is to recommend products that customers are likely to purchase.
@@ -91,7 +90,7 @@ The model pipeline is described as follows:
 For this experiment, we used the 3 recommended products while taking the first product of the test instant as the input and defining all the rest as the target.  
 We can see that we achieved Hit-Rate of 66%, which can be considered high in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
 It will be interesting to compare this algorithm to other algorithms that are used in the industry because, to my best knowledge, the use of word2vec as embedding in recommendation systems is implemented only in the academic field but not in the industry. 
-
+<br>
 **Future work:**
 * Testing different methodologies, for example, reinforcement learning, unsupervised(Matrix Factorization), and Cosine similarity.
 * Model optimization: embedding vector size, regularization (L1/L2), classifier (SVM).
