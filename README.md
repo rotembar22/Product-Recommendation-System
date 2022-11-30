@@ -82,6 +82,12 @@ The model pipeline is described as follows:
 5. Train Logistic Regression classifier.
 6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
+
+**How I built the train set. i.e., how I transform the data from unsupervised to self-supervised.**
+When we fed the classification model, logistic regression, in our case, an input we need to provide is also the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
+The following issue we will face when building this train set is how to address transactions with only one item. I decided to handle this by creating a new item called "None" that helps us represent items that were purchased with no other items.
+ * Interesting info: word2vec model is also a self-supervised algorithm.
+
 # Conclusions
 
 **Model results:**
