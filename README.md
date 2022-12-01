@@ -89,7 +89,8 @@ The system I built consists of two main components. An embedding model aims to l
 </p>
 
 
-The model pipeline is described as follows:
+**The model pipeline is described as follows:**
+
 1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
 2. One-Hot Encoding for the categorical features
 3. Train a word2vec embedding model
@@ -97,10 +98,14 @@ The model pipeline is described as follows:
 5. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
 <br>
+
 **Why is it essential to the embedding model only on the train set.**
+
 We could easily think that nothing wrong can happen if we train the word2vec model on all the instances and encode the train set and test set separately. I saw many projects doing that, especially when performing TF-IDF vectorization. The problem with this approach is that the model also learns the connection from the test samples, which creates **data leakage**.
 <br>
+
 **How I built the train set. i.e., how I transform the data from unsupervised to self-supervised:**
+
 <br>When we fed the classification model an input, logistic regression in our case,  we also needed to provide the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
 The following issue we will face when building this train set is how to address transactions with only one item. I decided to handle this by creating a new item called "None" that helps us represent items that were purchased with no other items.
  * Interesting info: word2vec model is also a self-supervised algorithm.
@@ -110,7 +115,8 @@ transaction: item_1, item_2, item_3
    1. input: item_1  ;  target: item_2
    2. input: item_1  ;  target: item_3
    3. input: item_2  ;  target: item_3
-<br
+<br>
+
 **How I built the test set:**
 <br>For the test set, we need as input one or more items, and the target will be the following purchased items. Since our input, in that case, could be more than one, this will increase the number of instances exponents, and quickly, we will get millions of instances. To keep it simple, I took only the first item as input and all the following items as the target.
 
@@ -120,11 +126,16 @@ transaction: item_1, item_2, item_3, item_4 <br>
 
 <br>
 **How to encode more than one item?**
-<br>As in the NLP field, we want to encode sentences and not only one word, which this task is called sentence embedding. For that purpose, I used the most simple and straightforward sentence embedding method: averaging the items vectors. 
-<br
-# Conclusions
 <br>
+As in the NLP field, we want to encode sentences and not only one word, which this task is called sentence embedding. For that purpose, I used the most simple and straightforward sentence embedding method: averaging the items vectors. 
+<br>
+
+# Conclusions
+
+<br>
+
 **Model results:**
+
 * Hit-rate results: 66.3%
 * Hit-rate per item: 49.1%
 
@@ -133,6 +144,7 @@ For this experiment, I used the 3 recommended products while taking the first pr
 We can see that we achieved Hit-Rate of 66%, which can be considered high in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
 It will be interesting to compare this algorithm to other algorithms that are used in the industry because, to my best knowledge, the use of word2vec as embedding in recommendation systems is implemented only in the academic field but not in the industry. 
 <br>
+
 **Future work:**
 * Testing different methodologies, for example, reinforcement learning, unsupervised(Matrix Factorization), and Cosine similarity.
 * Model optimization: embedding vector size, regularization (L1/L2), classifier (SVM).
