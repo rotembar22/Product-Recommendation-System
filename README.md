@@ -83,8 +83,8 @@ The model pipeline is described as follows:
 6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
 
-**How I built the train set. i.e., how I transform the data from unsupervised to self-supervised.**
-When we fed the classification model an input, logistic regression in our case,  we also needed to provide the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
+**How I built the train set. i.e., how I transform the data from unsupervised to self-supervised:**
+<br>When we fed the classification model an input, logistic regression in our case,  we also needed to provide the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
 The following issue we will face when building this train set is how to address transactions with only one item. I decided to handle this by creating a new item called "None" that helps us represent items that were purchased with no other items.
  * Interesting info: word2vec model is also a self-supervised algorithm.
 
@@ -95,17 +95,18 @@ transaction: item_1, item_2, item_3
    3. input: item_2  ;  target: item_3
 
 **How I built the test set:**
-For the test set, we need as input one or more items, and the target will be the following purchased items. Since our input, in that case, could be more than one, this will increase the number of instances exponents, and quickly, we will get millions of instances. To keep it simple, I took only the first item as input and all the following items as the target.
+<br>For the test set, we need as input one or more items, and the target will be the following purchased items. Since our input, in that case, could be more than one, this will increase the number of instances exponents, and quickly, we will get millions of instances. To keep it simple, I took only the first item as input and all the following items as the target.
 
 Example:
-transaction: item_1, item_2, item_3, item_4 
-   input: item_1
-   target:  item_2, item_3, item_4 
+transaction: item_1, item_2, item_3, item_4 <br>
+   1. input: item_1 ; target:  item_2, item_3, item_4 
 
 # Conclusions
 
 **Model results:**
 * Hit-rate results: 66.3%
+* Hit-rate per item: 49.1%
+
 <br>
 For this experiment, we used the 3 recommended products while taking the first product of the test instant as the input and defining all the rest as the target.  
 We can see that we achieved Hit-Rate of 66%, which can be considered high in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
