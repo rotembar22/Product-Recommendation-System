@@ -51,7 +51,7 @@ known information would include daypart, channel, and the first 1+ item(s) that 
  • A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
 
 <br>Therefore the metric **Hit-Rate** described as follows:<br>
-Numbers of items that were sessfully purchased from the offers item divided by the number of items offered.
+The number of items that were sessfully purchased from the offered items divided by the number of items offered.
 <br>
 I don't think this is the metric that best represents the model's success. It does not consider the number of items made in the transaction. For future work, I would like to think of a metric that would better represent the model's success.
      
@@ -71,7 +71,8 @@ There are many approaches that can address our task. In this project, I decided 
 
 <br>
 **Why use word2vec for recommendation systems?**
-<brI will not get into much detail on how word2vec works. It is one of the most popular models in the NLP field (until recent years, at least), and there is a lot of info on the internet explaining how it works. The obvious question is, why implement a model from natural language processing on a product recommendation system. Let's define what word2vec aims to do: learning to represent words on the vector space by learning the semantic relationship between the words. We can leverage this algorithm for our use. word2vec can learn the relationship between the items and present them in the vector space. For example, "king" and "queen" will be represented close (low cosine similarity) to each other when used in the NLP field. And in our case, the items "keyboard" and "mouse" will be represented close to each other.<br>
+<br>
+I will not get into much detail on how word2vec works. It is one of the most popular models in the NLP field (until recent years, at least), and there is a lot of info on the internet explaining how it works. The obvious question is, why implement a model from natural language processing on a product recommendation system. Let's define what word2vec aims to do: learning to represent words on the vector space by learning the semantic relationship between the words. We can leverage this algorithm for our use. word2vec can learn the relationship between the items and present them in the vector space. For example, "king" and "queen" will be represented close (low cosine similarity) to each other when used in the NLP field. And in our case, the items "keyboard" and "mouse" will be represented close to each other.<br>
 
 
 # Methodology
