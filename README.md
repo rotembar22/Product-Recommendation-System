@@ -58,8 +58,10 @@ known information would include daypart, channel, and the first 1+ item(s) that 
 <br>Therefore the metric **Hit-Rate** described as follows:<br>
 The number of items that were sessfully purchased from the offered items divided by the number of items offered.
 <br>
-I don't think this is the metric that best represents the model's success. It does not consider the number of items made in the transaction. For future work, I would like to think of a metric that would better represent the model's success.
-     
+ 
+Addiontly, how will it count if an offered item is purchased more than once? For that, I defined the **Hit-Rate per item**, which count item that perched multiple times as one hit.
+<br>
+Still, I don't think this is the metric that best represents the model's success. It does not consider the number of items made in the transaction. For future work, I would like to think of a metric that would better represent the model's success.
 
 <p align="center">
 <img src="images/Screenshot 2022-11-29 102451.jpeg" width=70% height=70% >
