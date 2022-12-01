@@ -139,9 +139,11 @@ As in the NLP field, we want to encode sentences and not only one word, which th
 
 # Code
 
-[I'm an inline-style link with title](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/Product%20Recommendation%20System.ipynb "Jupyter notebook")
+Here is the full implementation of the algorithem + EDA 
 
-[I'm a relative reference to a repository file](Product Recommendation System.ipynb)
+[Jupyter notebook](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/Product%20Recommendation%20System.ipynb "Jupyter notebook")
+
+
 
 # Conclusions
 
