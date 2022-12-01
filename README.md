@@ -42,14 +42,19 @@ Powered by machine learning, a product recommender system is a technology used t
 <br
 # Model Metric & Model Requierments
 
-<br>• Recommendations will occur at the transaction level and will be derived from the raw outputs of your predictive model. When making an item recommendation,
-known information would include: daypart, channel, and the first 1+ item(s) that the customer has already chosen.
-<br>• A recommendation will be determined and shown immediately after the customer chooses their first item. Optionally, the recommendation is allowed to update as a
-customer chooses more items. However, a customer should see no more than 5 unique item recommendations during their order.
-<br>• A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
+<br>
+• Recommendations will occur at the transaction level and be derived from the raw outputs of the predictive model. When making an item recommendation,
+known information would include daypart, channel, and the first 1+ item(s) that the customer has already chosen.
+<br>
+• A recommendation will be determined and shown immediately after the customer chooses their first item. A customer should see no more than 5 unique item recommendations during their order.
+<br>
+ • A recommendation will consist of 3 items that are shown to the customer simultaneously on a screen. (The ordering of the 3 recommended items does not matter.)
 
-<br>Therefore the metric **Hit-Rate** described as follows:
-A “hit” would occur if a customer purchases an item that was recommended/
+<br>Therefore the metric **Hit-Rate** described as follows:<br>
+Numbers of items that were sessfully purchased from the offers item divided by the number of items offered.
+<br>
+I don't think this is the metric that best represents the model's success. It does not consider the number of items made in the transaction. For future work, I would like to think of a metric that would better represent the model's success.
+     
 
 <p align="center">
 <img src="images/Screenshot 2022-11-29 102451.jpeg" width=70% height=70% >
@@ -66,9 +71,9 @@ There are many approaches that can address our task. In this project, I decided 
 
 <br>
 **Why use word2vec for recommendation systems?**
-<brI will not get into much detail on how word2vec works. It is one of the most popular models in the NLP field (until recent years, at least), and there is a lot of info on the internet explaining how it works. The obvious question is, why implement a model from natural language processing on a product recommendation system. Let's define what word2vec aims to do: learning to represent words on the vector space by learning the semantic relationship between the words. We can leverage this algorithm for our use. word2vec can learn the relationship between the items and present them in the vector space. For example, "king" and "queen" will be represented close (low cosine similarity) to each other when used in the NLP field. And in our case, the items "keyboard" and "mouse" will be represented close to each other.
+<brI will not get into much detail on how word2vec works. It is one of the most popular models in the NLP field (until recent years, at least), and there is a lot of info on the internet explaining how it works. The obvious question is, why implement a model from natural language processing on a product recommendation system. Let's define what word2vec aims to do: learning to represent words on the vector space by learning the semantic relationship between the words. We can leverage this algorithm for our use. word2vec can learn the relationship between the items and present them in the vector space. For example, "king" and "queen" will be represented close (low cosine similarity) to each other when used in the NLP field. And in our case, the items "keyboard" and "mouse" will be represented close to each other.<br>
 
-<br>
+
 # Methodology
 
 The system I built consists of two main components. An embedding model aims to learn the relationships between the products and, thus, the ability to represent them in the vector space. And a classification model that can produce the vector of probabilities for purchasing each product.
