@@ -19,6 +19,7 @@
 The client’s objective is to recommend products that customers are likely to purchase.
 The company objective is to solve the client's business problem by creating a real-time recommendation engine. 
 <br>
+
 # Overview
 
 Product recommender systems surface items available for purchase across web pages, mobile apps, emails, etc. One of the most popular methods used by retailers, recommendations guide visitors to products they are likely interested in, improving the discovery process and helping them find what they want more efficiently.
