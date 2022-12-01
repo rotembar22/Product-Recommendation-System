@@ -139,7 +139,7 @@ As in the NLP field, we want to encode sentences and not only one word, which th
 
 # Code
 
-Here is the full implementation of the algorithem + EDA 
+Here is the full implementation of the algorithm + EDA:
 
 [Jupyter notebook](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/Product%20Recommendation%20System.ipynb "Jupyter notebook")
 
