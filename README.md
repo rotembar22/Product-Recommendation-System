@@ -15,7 +15,9 @@
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
 <br>
+
 # Objective
+
 The client’s objective is to recommend products that customers are likely to purchase.
 The company objective is to solve the client's business problem by creating a real-time recommendation engine. 
 <br>
