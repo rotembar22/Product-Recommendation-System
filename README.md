@@ -32,7 +32,9 @@ Powered by machine learning, a product recommender system is a technology used t
 <img src="images/New Bitmap image.JPg" width=70% height=70% >
 </p>
 <br>
+
 # Dataset
+
 <p align="center">
 <img src="images/Screenshot 2022-11-29 104349.jpeg" width=70% height=70% >
 </p>
