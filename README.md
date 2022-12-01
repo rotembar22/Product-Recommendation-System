@@ -150,8 +150,8 @@ Here is the full implementation of the algorithm + EDA:
 * Hit-rate per item: 49.1%
 
 <br>
-For this experiment, I used the 3 recommended products while taking the first product of the test instant as the input and defining all the rest as the target.  
-We can see that we achieved Hit-rate per item of 49.1%, which can be considered high results in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
+
+We can see that we achieved Hit-Rate per item of 49.1%, which can be considered high results in the real world. But those results only represent this data. To truly evaluate our model, we must compare it to other models/algorithms.
 It will be interesting to compare this algorithm to other algorithms that are used in the industry because, to my best knowledge, the use of word2vec as embedding in recommendation systems is implemented only in the academic field but not in the industry. 
 <br><br>
 
