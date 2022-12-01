@@ -77,11 +77,13 @@ The system I built consists of two main components. An embedding model aims to l
 The model pipeline is described as follows:
 1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
 2. One-Hot Encoding for the categorical features
-3. Train-Test split -an important note is that we will train only on the train set in the embedding model. It is easy to make a mistake by train embedding the model on all the data and encoding only the train, which causes data leakage.
-4. Train a word2vec embedding model
-5. Train Logistic Regression classifier.
-6. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
+3. Train a word2vec embedding model
+4. Train Logistic Regression classifier.
+5. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
+
+**Why is it essential to the embedding model only on the train set.**
+We could easily think that nothing wrong can happen if we train the word2vec model on all the instances and encode the train set and test set separately. I saw many projects doing that, especially when performing TF-IDF vectorization. The problem with this approach is that the model also learns the connection from the test samples, which creates **data leakage**.
 
 **How I built the train set. i.e., how I transform the data from unsupervised to self-supervised:**
 <br>When we fed the classification model an input, logistic regression in our case,  we also needed to provide the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
