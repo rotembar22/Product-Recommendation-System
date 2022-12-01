@@ -26,12 +26,12 @@ Today, retailers often have thousands (and sometimes millions) of products in th
 Powered by machine learning, a product recommender system is a technology used to suggest which products are shown to individuals interacting with a brand’s digital properties. 
 
 <p align="center">
-<img src="images/New Bitmap image.JPg" width=50% height=50% >
+<img src="images/New Bitmap image.JPg" width=70% height=70% >
 </p>
 
 # Dataset
 <p align="center">
-<img src="images/Screenshot 2022-11-29 104349.jpeg" width=50% height=50% >
+<img src="images/Screenshot 2022-11-29 104349.jpeg" width=70% height=70% >
 </p>
 
 <br>**tid** -Unique transaction ID
@@ -52,7 +52,7 @@ customer chooses more items. However, a customer should see no more than 5 uniqu
 A “hit” would occur if a customer purchases an item that was recommended/
 
 <p align="center">
-<img src="images/Screenshot 2022-11-29 102451.jpeg" width=50% height=50% >
+<img src="images/Screenshot 2022-11-29 102451.jpeg" width=70% height=70% >
 </p>
 
 # Research
@@ -60,7 +60,7 @@ A “hit” would occur if a customer purchases an item that was recommended/
 There are many approaches that can address our task. In this project, I decided to use the word2vec embedding model. Here is a quick list of related works that used word2vec  for recommendation systems (I didn't read all of them).
 
 <p align="center">
-<img src="images/Screenshot 2022-11-29 102510.jpeg" width=50% height=50% >
+<img src="images/Screenshot 2022-11-29 102510.jpeg" width=70% height=70% >
 </p>
 
 
