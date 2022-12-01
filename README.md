@@ -111,7 +111,7 @@ The following issue we will face when building this train set is how to address 
  * Interesting info: word2vec model is also a self-supervised algorithm.
 
 Example of the transformation:
-transaction: item_1, item_2, item_3
+<br>transaction: item_1, item_2, item_3
    1. input: item_1  ;  target: item_2
    2. input: item_1  ;  target: item_3
    3. input: item_2  ;  target: item_3
