@@ -108,6 +108,10 @@ Example:
 transaction: item_1, item_2, item_3, item_4 <br>
    1. input: item_1 ; target:  item_2, item_3, item_4 
 
+
+**How to encode more than one item?**
+<br>As in the NLP field, we want to encode sentences and not only one word, which this task is called sentence embedding. For that purpose, I used the most simple and straightforward sentence embedding method: averaging the items vectors. 
+
 # Conclusions
 
 **Model results:**
