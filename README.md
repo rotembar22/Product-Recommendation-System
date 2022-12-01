@@ -92,14 +92,14 @@ The system I built consists of two main components. An embedding model aims to l
 **The model pipeline is described as follows:**
 
 1. Pre-processing- converting from unsupervised to semi-supervised by creating new instances while the target feature for each product is one of the following purchased products.
-2. One-Hot Encoding for the categorical features
-3. Train a word2vec embedding model
+2. One-Hot Encoding for the categorical features.
+3. Train a word2vec embedding model.
 4. Train Logistic Regression classifier.
 5. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
 <br>
 
-**Why is it essential to the embedding model only on the train set.**
+**How to avoid data leakage:**
 
 We could easily think that nothing wrong can happen if we train the word2vec model on all the instances and encode the train set and test set separately. I saw many projects doing that, especially when performing TF-IDF vectorization. The problem with this approach is that the model also learns the connection from the test samples, which creates **data leakage**.
 <br>
