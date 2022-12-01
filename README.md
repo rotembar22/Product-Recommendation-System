@@ -1,20 +1,5 @@
 # Product Recommendation System
 
-# Contents
-
-[***Objective***](https://github.com/rotembaruch/Product-Recommendation-System#objective)
-
-[***Overview***](https://github.com/rotembaruch/Product-Recommendation-System#overview)
-
-[***Dataset Description***](https://github.com/rotembaruch/Product-Recommendation-System#dataset)
-
-[***Research***](https://github.com/rotembaruch/Product-Recommendation-System#research)
-
-[***Methodology***](https://github.com/rotembaruch/Product-Recommendation-System#methodology)
-
-[***Code***](https://github.com/rotembaruch/Product-Recommendation-System#code)
-
-[***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
 ## Quick Links
 
