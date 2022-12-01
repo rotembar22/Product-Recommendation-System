@@ -14,11 +14,11 @@
 
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
- <br
+ <br>
 # Objective
 The client’s objective is to recommend products that customers are likely to purchase.
 The company objective is to solve the client's business problem by creating a real-time recommendation engine. 
-<br
+<br>
 # Overview
 
 Product recommender systems surface items available for purchase across web pages, mobile apps, emails, etc. One of the most popular methods used by retailers, recommendations guide visitors to products they are likely interested in, improving the discovery process and helping them find what they want more efficiently.
@@ -28,7 +28,7 @@ Powered by machine learning, a product recommender system is a technology used t
 <p align="center">
 <img src="images/New Bitmap image.JPg" width=70% height=70% >
 </p>
-<br
+<br>
 # Dataset
 <p align="center">
 <img src="images/Screenshot 2022-11-29 104349.jpeg" width=70% height=70% >
@@ -39,7 +39,7 @@ Powered by machine learning, a product recommender system is a technology used t
 <br>**daypart** --Time of day when order occurred
 <br>**channel** -Indicates how a customer placed their order
 <br>**items** -Sequenced receipt data. Read from left-to-right, this indicates the sequence in which the customer chose each item while placing an order. e.g., "X,Y,Z" would mean that the customer ordered X, then Y, then Z within a single transaction.
-<br
+<br>
 # Model Metric & Model Requierments
 
 <br>
@@ -91,10 +91,10 @@ The model pipeline is described as follows:
 4. Train Logistic Regression classifier.
 5. We will extract the probability vector from the Logistic Regression classifier and suggest 3 to 5 top products for the test instances.
 
-<br
+<br>
 **Why is it essential to the embedding model only on the train set.**
 We could easily think that nothing wrong can happen if we train the word2vec model on all the instances and encode the train set and test set separately. I saw many projects doing that, especially when performing TF-IDF vectorization. The problem with this approach is that the model also learns the connection from the test samples, which creates **data leakage**.
-<br
+<br>
 **How I built the train set. i.e., how I transform the data from unsupervised to self-supervised:**
 <br>When we fed the classification model an input, logistic regression in our case,  we also needed to provide the target feature. In our case, the items feature are built as sequential items purchased one by one. We will leverage this data structure for building pairs of items while taking one item, and for the target, we will take one of the following items. This will obviously increase our train instances dramatically.  
 The following issue we will face when building this train set is how to address transactions with only one item. I decided to handle this by creating a new item called "None" that helps us represent items that were purchased with no other items.
@@ -113,12 +113,12 @@ Example:
 transaction: item_1, item_2, item_3, item_4 <br>
    1. input: item_1 ; target:  item_2, item_3, item_4 
 
-<br
+<br>
 **How to encode more than one item?**
 <br>As in the NLP field, we want to encode sentences and not only one word, which this task is called sentence embedding. For that purpose, I used the most simple and straightforward sentence embedding method: averaging the items vectors. 
 <br
 # Conclusions
-<br
+<br>
 **Model results:**
 * Hit-rate results: 66.3%
 * Hit-rate per item: 49.1%
