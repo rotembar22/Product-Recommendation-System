@@ -64,10 +64,11 @@ There are many approaches that can address our task. In this project, I decided 
 </p>
 
 
+<br>
 **Why use word2vec for recommendation systems?**
 <brI will not get into much detail on how word2vec works. It is one of the most popular models in the NLP field (until recent years, at least), and there is a lot of info on the internet explaining how it works. The obvious question is, why implement a model from natural language processing on a product recommendation system. Let's define what word2vec aims to do: learning to represent words on the vector space by learning the semantic relationship between the words. We can leverage this algorithm for our use. word2vec can learn the relationship between the items and present them in the vector space. For example, "king" and "queen" will be represented close (low cosine similarity) to each other when used in the NLP field. And in our case, the items "keyboard" and "mouse" will be represented close to each other.
 
-<br
+<br>
 # Methodology
 
 The system I built consists of two main components. An embedding model aims to learn the relationships between the products and, thus, the ability to represent them in the vector space. And a classification model that can produce the vector of probabilities for purchasing each product.
