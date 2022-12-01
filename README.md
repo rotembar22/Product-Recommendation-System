@@ -16,7 +16,17 @@
 
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
-<br>
+## Quick Links
+
+  - [Objective](#objective)
+  - [Overview](#overview)
+  - [Dataset Description](#dataset)
+  - [Research](#research)
+  - [Methodology](#methodology)
+  - [Code](#code)
+  - [Conclusions](#conclusions)
+
+
 
 # Objective
 
