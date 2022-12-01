@@ -12,6 +12,8 @@
 
 [***Methodology***](https://github.com/rotembaruch/Product-Recommendation-System#methodology)
 
+[***Code***](https://github.com/rotembaruch/Product-Recommendation-System#code)
+
 [***Conclusions***](https://github.com/rotembaruch/Product-Recommendation-System#conclusions)
 
 <br>
@@ -134,6 +136,12 @@ transaction: item_1, item_2, item_3, item_4 <br>
 
 As in the NLP field, we want to encode sentences and not only one word, which this task is called sentence embedding. For that purpose, I used the most simple and straightforward sentence embedding method: averaging the items vectors. 
 <br>
+
+# Code
+
+[I'm an inline-style link with title](https://github.com/rotembaruch/Product-Recommendation-System/blob/main/Product%20Recommendation%20System.ipynb "Jupyter notebook")
+
+[I'm a relative reference to a repository file](Product Recommendation System.ipynb)
 
 # Conclusions
 
